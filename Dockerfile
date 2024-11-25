@@ -38,6 +38,7 @@ RUN curl -O https://repo.anaconda.com/archive/Anaconda3-2024.10-1-Linux-x86_64.s
 	sh Anaconda3-2024.10-1-Linux-x86_64.sh -b && \
 	rm Anaconda3-2024.10-1-Linux-x86_64.sh && \
 	echo 'export PATH=~/anaconda3/bin:$PATH' >> ~/.bashrc && \
+	echo 'export PATH=~/anaconda3/bin:$PATH' >> ~/.zshrc && \
 	export PATH=~/anaconda3/bin:$PATH && \
 	conda update -n base -c defaults conda -y && \
 	conda create -n tf python=3.10 -y && \
