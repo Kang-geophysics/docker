@@ -43,4 +43,6 @@ RUN curl -O https://repo.anaconda.com/archive/Anaconda3-2024.10-1-Linux-x86_64.s
 	conda update -n base -c defaults conda -y && \
 	conda create -n tf python=3.10 -y && \
 	conda install -n tf -c conda-forge ipykernel -y && \
-	conda install -n tf -c conda-forge tensorflow=2.11 -y
+	conda install -n tf -c conda-forge tensorflow=2.11 -y && \
+	conda init bash && \
+	conda init zsh
