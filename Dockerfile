@@ -21,8 +21,8 @@ RUN apt-get update \
 	libxtst6 \
 	&& apt-get clean && rm -rf /var/lib/apt/lists/*
 # Layer 2: Install Homebrew
-RUN curl -fsSL https://raw.githubusercontent.com/Homebrew/install/HEAD/install.sh | bash
-RUN	echo 'eval "$(/home/linuxbrew/.linuxbrew/bin/brew shellenv)"' >> ~/.bashrc && \
+RUN curl -fsSL https://raw.githubusercontent.com/Homebrew/install/HEAD/install.sh | bash && \
+	echo 'eval "$(/home/linuxbrew/.linuxbrew/bin/brew shellenv)"' >> ~/.bashrc && \
 	echo 'export PATH=/home/linuxbrew/.linuxbrew/bin:$PATH' >> ~/.bashrc && \
 	eval "$(/home/linuxbrew/.linuxbrew/bin/brew shellenv)" && \
 	brew install zsh tmux neovim fzf lsd
